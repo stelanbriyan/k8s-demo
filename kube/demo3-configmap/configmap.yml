@@ -4,4 +4,4 @@ metadata:
   name: demo-application-martech-cm
 data:
   SERVER_PORT: '8080'
-  CONTEXT_PATH: demo-app1
+  CONTEXT_PATH: /demo-app1

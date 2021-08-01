@@ -1,0 +1,3 @@
+kubectl autoscale deployment demo-application-martech-deployment --cpu-percent=50 --min=1 --max=5
+
+kubectl get hpa

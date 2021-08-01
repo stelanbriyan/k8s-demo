@@ -1,0 +1,1 @@
+eksctl create nodegroup --cluster martech --name al-node --node-type t2.medium --nodes 1 --nodes-min 1 --nodes-max 1 --ssh-access

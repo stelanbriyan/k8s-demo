@@ -1,0 +1,20 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: demo-application
+  region: us-east-2
+nodeGroups:
+  - name: cluster-martech
+    desiredCapacity: 2
+    maxSize: 3
+    instancesDistribution:
+      maxPrice: 0.2
+      instanceTypes: ["t2.medium"]
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBaseCapacity: 50
+    iam:
+      withAddonPolicies:
+        autoScaler: true
+    labels:
+      nodegroup-type: stateless-workload
+      instance-type: on-demand-and-spot

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-application-martech-deployment
+spec:
+  selector:
+    matchLabels:
+      app: demo-application-martech-deployment
+  template:
+    metadata:
+      name: demo-application-martech-deployment
+      labels:
+        app: demo-application-martech-deployment
+    spec:
+      containers:
+        - name: demo-application-martech-deployment
+          image: stelanbriyan/demo-application-martech:0.0.1-SNAPSHOT
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

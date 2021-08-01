@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-application-martech-cm
+data:
+  SERVER_PORT: '8080'
+  CONTEXT_PATH: demo-app2
